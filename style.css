@@ -1,0 +1,128 @@
+:root {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --accent: #00bcd4;
+  --card: #1e1e1e;
+
+  --light-bg: #ffffff;
+  --light-text: #111;
+  --light-card: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+header {
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.5s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+}
+
+.projects .project-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  transition: background 0.5s;
+}
+
+.project-card img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  color: #888;
+  margin-top: 2rem;
+  transition: background 0.5s;
+}
+
+body.light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.light header,
+body.light .project-card,
+body.light footer {
+  background: var(--light-card);
+}
+
+body.light a {
+  color: var(--light-text);
+}
+
+* {
+  transition: all 0.4s ease;
+}
